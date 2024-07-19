@@ -1,10 +1,7 @@
 #include "matrix.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
 
-matrix getMemMatrix(int nRows, int nCols) {
+
+matrix getMemMatrix(const int nRows, const int nCols) {
     int **values = (int **) malloc(sizeof(int*) * nRows);
     for (int i = 0; i < nRows; i++)
         values[i] = (int *) malloc(sizeof(int) * nCols);
